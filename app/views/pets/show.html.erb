@@ -1,11 +1,13 @@
-<h1><%= @pet.name %></h1>
+<div class="jumbotron">
 
-<h3><%= @pet.species %></h3>
+  <h1 class = "font-weight-bold"><%= @pet.name.capitalize %></h1>
 
-<p>Found near <%= @pet.address %></p>
+  <h6 class = "text-muted">Species: <%= @pet.species %></h3>
 
-<p>Found on <%= @pet.found_on %></p>
+  <p class = "font-weight-light text-muted">Found on <%= @pet.found_on %> near <%= @pet.address %></p>
 
-<%= link_to 'Go back home', root_path %>
+  <%= link_to 'Go back home', root_path, class: "btn btn-primary"%>
+</div>
+
 
 
