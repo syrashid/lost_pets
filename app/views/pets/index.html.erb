@@ -1,13 +1,22 @@
 
-<h1>All The Found Pets</h1>
+<h1 class="mt-5 jumbotron text-center">All The Lost Pets</h1>
 
-<ul>
-  <% @pets.each do |pet| %>
-    <li><%= link_to pet.name,  pet_path(pet)%> <%= link_to '<i class="fas fa-pencil-alt"></i>'.html_safe, edit_pet_path(pet) %>
-      <%= link_to '<i class="fas fa-home"></i>'.html_safe,
-      pet_path(pet), method: :delete, data: { confirm:  "Are you sure?"} %></li>
-  <% end %>
-</ul>
+<div class="container mt-2">
+  <div class="row">
+    <% @pets.each do |pet| %>
+    <div class="card col-sm-4" style="width: 18rem;">
+      <div class="card-body">
+        <h3 class="card-title"><%= link_to pet.name.capitalize,  pet_path(pet)%></h5>
+        <h6 class="card-subtitle mb-2 text-muted">Found however  many days  ago</h6>
+        <%= link_to 'Edit Pet', edit_pet_path(pet), class: "card-link" %>
+         <%= link_to 'Pet Found',
+    pet_path(pet), method: :delete, data: { confirm:  "Are you sure?"}, class: "card-link" %></li>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
 
 
-<%= link_to '<i class="fas fa-plus"></i> Add a new pet'.html_safe, pets_new_path %>
+
+  <%= link_to '<i class="fas fa-plus"></i> Add a new pet'.html_safe, pets_new_path, class: "btn btn-primary mt-4" %>
