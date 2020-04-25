@@ -14,9 +14,11 @@
       </div>
     </div>
     <% end %>
+    <div class="card col-sm-4 d-flex justify-content-center" style="width: 18rem;">
+      <%= link_to '<i class="fas fa-plus"></i> Add a new pet'.html_safe, pets_new_path, class: "btn btn-primary" %>
+    </div>
+
   </div>
 </div>
 
 
-
-  <%= link_to '<i class="fas fa-plus"></i> Add a new pet'.html_safe, pets_new_path, class: "btn btn-primary mt-4" %>
