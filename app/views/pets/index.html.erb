@@ -3,6 +3,9 @@
 
 <ul>
   <% @pets.each do |pet| %>
-    <li><%= link_to pet.name,  pet_path(pet)%></li>
+    <li><%= link_to pet.name,  pet_path(pet)%> <%= link_to '<i class="fas fa-pencil-alt"></i>'.html_safe, edit_pet_path(pet) %></li>
   <% end %>
 </ul>
+
+
+<%= link_to '<i class="fas fa-plus"></i> Add a new pet'.html_safe, pets_new_path %>
