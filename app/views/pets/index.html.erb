@@ -3,7 +3,9 @@
 
 <ul>
   <% @pets.each do |pet| %>
-    <li><%= link_to pet.name,  pet_path(pet)%> <%= link_to '<i class="fas fa-pencil-alt"></i>'.html_safe, edit_pet_path(pet) %></li>
+    <li><%= link_to pet.name,  pet_path(pet)%> <%= link_to '<i class="fas fa-pencil-alt"></i>'.html_safe, edit_pet_path(pet) %>
+      <%= link_to '<i class="fas fa-home"></i>'.html_safe,
+      pet_path(pet), method: :delete, data: { confirm:  "Are you sure?"} %></li>
   <% end %>
 </ul>
 
