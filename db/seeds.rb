@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+ Pet.create(name: 'dory', address: 'ocean', species: 'fish', found_on: Date.new(2020,3,21))
