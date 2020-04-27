@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   post "pets", to: "pets#create"
 
   # For displaying info on a singular pet story
-  get "pets/:id", to: "pets#show", as: :pet
+  get "pets/:name", to: "pets#show", as: :pet
 
   # For editing and updating a pet
   get "pets/:id/edit", to: "pets#edit", as: :edit_pet

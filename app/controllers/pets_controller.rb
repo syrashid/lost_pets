@@ -44,6 +44,6 @@ def pet_params
 end
 
 def set_pet
-  @pet = Pet.find(params[:id])
+  @pet = Pet.find_by(name: params[:name])
 end
 end
