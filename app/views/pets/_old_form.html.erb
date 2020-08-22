@@ -1,3 +1,5 @@
+<%# A form built using rails native form_for helper %>
+
 <%= form_for @pet do |f| %>
   <div class="form-group">
     <%= f.label :name %>
@@ -9,6 +11,7 @@
   </div>
   <div class="form-group">
     <%= f.label :species %>
+    <%# When we want to provide users a drop down to choose from we use the collection argument and pass the collection of items we'd like the user to choose from.  This is where our constant in our model comes in handy! %>
     <%= f.select :species, collection: Pet::SPECIES, class: "form-control" %>
   </div>
   <div class="form-group">

@@ -6,6 +6,7 @@
 
   <p class = "font-weight-light text-muted">Found on <%= @pet.found_on %> near <%= @pet.address %></p>
 
+  <%# Remember with linktos, the string is the text of the link, and the second argument should always be the path to wherever you want the link to go, then you can add other elements such as classes, etc %>
   <%= link_to 'Go back home', root_path, class: "btn btn-primary"%>
 </div>
 
