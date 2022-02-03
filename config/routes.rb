@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: "pets#index"
 
   # For my creating a new pet user story, remember this is broken into two pieces
-  get "pets/new", to: "pets#new"
+  get "pets/new", to: "pets#new", as: :new_pet
   post "pets", to: "pets#create"
 
   # For editing and updating a pet, remember this is proken into two pieces
